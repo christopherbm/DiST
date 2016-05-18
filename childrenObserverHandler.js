@@ -1,5 +1,5 @@
 module.exports = function() {
-  return function childrenObserverHandler() {
+  return function childrenObserverHandler(added, removed) {
     return function(muts) {
       muts.map(function(mut) {
         if (mut.addedNodes.length > 0) { added(mut.addedNodes); }
