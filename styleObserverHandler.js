@@ -1,5 +1,10 @@
 module.exports = function() {
-  return function styleObserverHandler(sel) {
+  const setDataAttr = require('myrs-js-core/fe/setDataAttr')();
+  const capitalize = require('myrs-js-core/shared/capitalize')();
+  const getStyle = require('myrs-js-core/fe/getStyle')();
+  const getDataAttr = require('myrs-js-core/fe/getDataAttr')();
+
+  return function styleObserverHandler(sel, fn) {
     return function(muts) {
       var el = sel();
       muts.map(function(mut) {
