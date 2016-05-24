@@ -15,7 +15,7 @@ module.exports = function() {
       styleObserverHandler(sel, style, () => {
         console.log('style observed');
         fn({});
-      })));
+    }));
     setDataAttr(el, 'obs' + capitalize(style), getStyle(el, style));
     el = null;
     return mo;
