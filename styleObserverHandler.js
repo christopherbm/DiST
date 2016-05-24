@@ -4,7 +4,7 @@ module.exports = function() {
   const getStyle = require('myrs-js-core/fe/getStyle')();
   const getDataAttr = require('myrs-js-core/fe/getDataAttr')();
 
-  return function styleObserverHandler(sel, fn) {
+  return function styleObserverHandler(sel, style, fn) {
     return function(muts) {
       var el = sel();
       muts.map(function(mut) {

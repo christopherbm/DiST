@@ -8,7 +8,7 @@ module.exports = function() {
 
   return function createStyleObserver(sel, style, fn) {
     var el = sel();
-    var mo = createMutationObserver(el, createAttrObserverConfig(), styleObserverHandler(sel, fn));
+    var mo = createMutationObserver(el, createAttrObserverConfig(), styleObserverHandler(sel, style, fn));
     setDataAttr(el, 'obs' + capitalize(style), getStyle(el, style));
     el = null;
     return mo;
