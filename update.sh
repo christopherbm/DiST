@@ -1,4 +1,5 @@
 #!/bin/bash
+echo '--- checking DiSt node_modules:'
 if [ -a node_modules ]
   then 
     echo "node_modules exists"
@@ -8,6 +9,7 @@ fi
 
 cd node_modules
 
+echo '--- checking DiSt / myrs-js-core:'
 if [ -a myrs-js-core ]
   then
     cd myrs-js-core
