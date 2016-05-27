@@ -1,11 +1,11 @@
 module.exports = function() {
   const createChildrenObserver = require('./createChildrenObserver')();
 
-  return function createOnChildChangeObserver(sel, addFn, removedFn) {
+  return function createOnChildChangeObserver(sel, addedFn, removedFn) {
     createChildrenObserver(
       sel, 
-      (added) => { console.log('added', added); },
-      (removed) => { console.log('removed', removed); }
+      (added) => { addedFn(added); },
+      (removed) => { removedFn(removed); }
     );
   }
 };
