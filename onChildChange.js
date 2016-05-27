@@ -3,6 +3,6 @@ module.exports = function() {
 
   return function onChildChange(sel, addedFn, removedFn) {
     createOnChildChangeObserver(sel);
-    sel().addEventListener('child.change', fn, false);
+    //sel().addEventListener('child.change', fn, false);
   }
 };
