@@ -1,5 +1,5 @@
 module.exports = function() {
-  function observe(el) {
+  return function observe(el) {
     var observer = new MutationObserver(function(mutations) {
       mutations.forEach(function(mutation) {
         //console.log(mutation);
